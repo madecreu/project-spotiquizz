@@ -1,0 +1,43 @@
+{
+  "extends": "./tsconfig.paths.json",
+  "ts-node": {
+    // these options are overrides used only by ts-node
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "require": ["tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": ["ESNext", "dom"],
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es2017",
+    "outDir": ".build/",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "components/**/*.tsx",
+    "pages/**/*.tsx",
+    "src/query/**/*.ts",
+    "tests/**/*.ts",
+    "scripts/*.ts"
+  ],
+  "exclude": [
+    "node_modules/**/*",
+    ".serverless/**/*",
+    ".webpack/**/*",
+    "_warmup/**/*",
+    ".vscode/**/*"
+  ]
+}
